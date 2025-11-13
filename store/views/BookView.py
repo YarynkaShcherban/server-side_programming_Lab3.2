@@ -3,9 +3,8 @@ from store.views.BaseView import BaseViewSet
 from store.serializers import BookSerializer
 from store.repositories.unit_of_work import UnitOfWork
 from rest_framework.response import Response
-from rest_framework.permissions import AllowAny
-uow = UnitOfWork()
 
+uow = UnitOfWork()
 
 class BookViewSet(BaseViewSet):
     repo = uow.books
